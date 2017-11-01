@@ -13,7 +13,7 @@ import { AppRoutes } from './app.routes';
 import { AuthGuard, ProtectedModule } from './core/';
 import { LocalStorageService } from './shared/';
 
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.prod';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
