@@ -6,7 +6,7 @@
 
 .fb-button {
     background:#3B5998;
-    color:#fff;
+    color:#000;
 }
 
 .google-button {
@@ -22,7 +22,7 @@
     #page {
         padding:1em;
     }
-    
+
     #toolbar {
         width:90%;
         margin-left: -45%;
