@@ -1,7 +1,11 @@
 @import '~theme/variables';
 
+div.form-container{
+  border-radius: 3px;
+}
+
 .lock {
-  font-size: 150px;
+  font-size: 50px;
 }
 
 .fb-button {
@@ -9,9 +13,17 @@
   color: $color-white;
 }
 
+.fb-button:hover{
+  background: $color-congress-blue-hover;
+}
+
 .google-button {
   background: $color-white;
   border: 1px solid $color-grey;
+}
+
+.google-button:hover{
+  background: $color-grey-hover;
 }
 
 .email-button {
