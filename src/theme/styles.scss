@@ -1,0 +1,123 @@
+@import 'variables';
+@import 'mixins';
+
+@import 'vendors/index';
+@import 'common/index';
+
+// to be removed
+
+$header-bg: #3b8598;
+
+body {
+  background: $color-porcelain;
+  padding-top: 4em;
+}
+
+.form-container {
+  background: $color-white;
+  left: 50%;
+  margin-left: -250px;
+  padding: 3.5em;
+  position: fixed;
+  width: 500px;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  padding: 1.2em;
+  width: 100%;
+}
+
+.basic-btn {
+  background: $header-bg;
+  color: $color-white;
+}
+
+input {
+  &.txt {
+    background: $color-white;
+    border: 1px solid $color-silver;
+    font-size: 1.3em;
+    padding: 1.3em 1em;
+  }
+}
+
+h2 {
+  margin: 1.7em 0 .9em;
+}
+
+.alc {
+  display: block;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.error {
+  background: $color-white;
+  display: block;
+  margin-bottom: 20px;
+  padding: 1em;
+  width: 100%;
+}
+
+.goback {
+  color: $header-bg;
+  font-size: .8em;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  span {
+    font-size: 1em;
+  }
+}
+
+
+
+.loading {
+  border: 5px solid $color-porcelain;
+  border-radius: 50%;
+  height: 30px;
+  left: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+  position: fixed;
+  top: 50%;
+  width: 30px;
+}
+
+
+.loading ::after {
+  animation: spin 1.2s infinite;
+  background: $color-porcelain;
+  content: '';
+  height: 10px;
+  left: -5px;
+  position: absolute;
+  top: 10px;
+  width: 40px;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 1.2em;
+  }
+
+  .form-container {
+    margin-left: -45%;
+    padding: 1.2em;
+    width: 90%;
+  }
+
+  button {
+    font-size: 1em;
+  }
+}
