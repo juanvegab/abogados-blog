@@ -1,0 +1,30 @@
+@import '~theme/variables';
+
+.lock {
+  font-size: 150px;
+}
+
+.fb-button {
+  background: $color-congress-blue;
+  color: $color-white;
+}
+
+.google-button {
+  background: $color-white;
+  border: 1px solid $color-grey;
+}
+
+.email-button {
+  background:  $color-porcelain;
+}
+
+@media (max-width:  600px) {
+  .page {
+    padding: 1em;
+  }
+
+  .toolbar {
+    margin-left:  -45%;
+    width: 90%;
+  }
+}
