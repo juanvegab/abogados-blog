@@ -1,33 +1,8 @@
 @import '~theme/variables';
-
-div.form-container{
-  border-radius: 3px;
-}
+//@import '~theme/common/buttons';
 
 .lock {
   font-size: 50px;
-}
-
-.fb-button {
-  background: $color-congress-blue;
-  color: $color-white;
-}
-
-.fb-button:hover{
-  background: $color-congress-blue-hover;
-}
-
-.google-button {
-  background: $color-white;
-  border: 1px solid $color-grey;
-}
-
-.google-button:hover{
-  background: $color-grey-hover;
-}
-
-.email-button {
-  background:  $color-porcelain;
 }
 
 @media (max-width:  600px) {

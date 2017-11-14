@@ -3,6 +3,7 @@
 
   <span class="error" *ngIf="error">{{ error }}</span>
 
+  <button routerLink="/login-email" class="email-button">Email</button>
   <button (click)="login()" class="fb-button">
     <i class="fa fa-facebook-official" aria-hidden="true"></i> Login With Facebook
   </button>
@@ -12,7 +13,6 @@
   <button (click)="login()" class="google-button">
     <i class="fa fa-google" aria-hidden="true"></i> Login With Google
   </button>
-  <!-- <button routerLink="/login-email" class="email-button">Email</button> -->
 
   <a routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
 </div>
