@@ -1,0 +1,36 @@
+@import '~theme/variables';
+
+.fb-button {
+  background: $color-congress-blue;
+  color: $color-white;
+
+  &:hover {
+    background: $color-congress-blue-hover;
+  }
+}
+
+.google-button {
+  background: $color-white;
+  border: 1px solid $color-grey;
+
+  &:hover {
+    background: $color-grey-hover;
+  }
+}
+
+.email-button {
+  background:  $color-porcelain;
+
+  &:hover {
+    background-color: $color-white;
+    border-radius: 3px;
+  }
+}
+
+.basic-btn {
+  margin-bottom: 5%;
+
+  &:hover {
+    background: $basic-button-hover;
+  }
+}
