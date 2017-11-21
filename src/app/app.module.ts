@@ -17,6 +17,7 @@ import { environment } from '../environments/environment.prod';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import '../theme/styles.scss';
 
@@ -26,7 +27,6 @@ const APP_PROVIDERS = [
 ];
 
 @NgModule({
-  bootstrap: [AppComponent],
   declarations: [AppComponent],
   imports: [
     BrowserModule,
@@ -35,9 +35,10 @@ const APP_PROVIDERS = [
     ProtectedModule,
     AppRoutes,
     AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
-    AngularFireDatabaseModule,
+    AngularFirestoreModule.enablePersistence(),
     AngularFireAuthModule
   ],
   providers: [APP_PROVIDERS],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

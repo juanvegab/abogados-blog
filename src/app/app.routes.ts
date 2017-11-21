@@ -8,17 +8,13 @@ import { AppComponent } from './app.component';
 import { AuthGuard, ProtectedComponent } from './core';
 
 const PROTECTED_ROUTES: Routes = [
-  { path: 'dashboard',
-    loadChildren: './core/views/dashboard/dashboard.module#DashboardModule' }
+  { path: 'dashboard',  loadChildren: './core/views/dashboard/dashboard.module#DashboardModule' }
 ];
 
 const PUBLIC_ROUTES: Routes = [
-  { path: '',
-    redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login',
-    loadChildren: './core/views/login/login.module#LoginModule' },
-  { path: 'signup',
-    loadChildren: './core/views/signup/signup.module#SignupModule' },
+  { path: '',           redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login',      loadChildren: './core/views/login/login.module#LoginModule' },
+  { path: 'signup',     loadChildren: './core/views/signup/signup.module#SignupModule' },
 ];
 
 const APP_ROUTES: Routes = [
