@@ -1,18 +1,21 @@
 <div class="form-container">
   <p class="text-center"><i class="lock fa fa-lock"></i></p>
+  <h2 class="text-center">Login</h2>
 
   <span class="error" *ngIf="error">{{ error }}</span>
 
-  <button routerLink="/login-email" class="email-button">Email</button>
-  <button (click)="login()" class="fb-button">
-    <i class="fa fa-facebook-official" aria-hidden="true"></i> Login With Facebook
-  </button>
+  <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+    <input type="text" placeholder="Correo" (ngModel)="email" name="email" class="txt" required>
+    <input type="password" placeholder="Contraseña" (ngModel)="password" name="password" class="txt" required>
+    <button type="submit" [disabled]="!formData.valid" class="basic-btn">Login</button>
+  </form>
 
+  <hr />
   <br>
 
   <button (click)="login()" class="google-button">
-    <i class="fa fa-google" aria-hidden="true"></i> Login With Google
+    <i class="fa fa-google" aria-hidden="true"></i> Login con Google
   </button>
 
-  <a routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+  <a routerLink="/signup" routerLinkActive="active" class="alc">No tiene cuenta? <strong>Registrarse</strong></a>
 </div>
