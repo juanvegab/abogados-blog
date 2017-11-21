@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService, UserModel, UserService } from '../../../shared/';
 
-import { AuthService } from '../../../shared/';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,9 +10,13 @@ import { AuthService } from '../../../shared/';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(public authService: AuthService) { }
+  public user$: Observable<UserModel>;
+
+  constructor(public authService: AuthService,
+              public userService: UserService) { }
 
   ngOnInit() {
+    this.user$ = this.authService.user;
   }
 
   public logout() {

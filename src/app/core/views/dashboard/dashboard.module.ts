@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { AuthService, SharedModule } from '../../../shared';
+import { AuthService, UserService, SharedModule } from '../../../shared';
 
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
@@ -17,7 +17,8 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
     SharedModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    UserService
   ]
 })
 

@@ -23,17 +23,17 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit(formData) {
-    if (formData.valid) {
-      console.log(formData.value);
-      this.authService.createUserWithEmail(formData.value.email, formData.value.password)
-      .then((success) => {
-        console.log(success);
-        this.router.navigate(['/dashboard']);
-      }).catch(
-        (err) => {
-        console.log(err);
-        this.error = err;
-      });
-    }
+    // if (formData.valid) {
+    //   console.log(formData.value);
+    //   this.authService.createUserWithEmail(formData.value.email, formData.value.password)
+    //   .then((success) => {
+    //     console.log(success);
+    //     this.router.navigate(['/dashboard']);
+    //   }).catch(
+    //     (err) => {
+    //     console.log(err);
+    //     this.error = err;
+    //   });
+    // }
   }
 }

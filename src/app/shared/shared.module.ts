@@ -9,7 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     FormsModule,
     // NgbModule,
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule,
+  ]
 })
 export class SharedModule { }

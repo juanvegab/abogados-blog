@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
   login() {
     this.authService.signInWithGoogle()
     .then((succes) => {
-      console.log(succes);
       this.router.navigate(['/dashboard']);
     }).catch((error) => {
       console.log(error);
