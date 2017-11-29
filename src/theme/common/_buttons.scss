@@ -11,7 +11,7 @@
 
 .google-button {
   background: $color-white;
-  border: $one-px solid $color-grey;
+  border: $google-border;
 
   &:hover {
     background: $color-grey-hover;
@@ -23,12 +23,12 @@
 
   &:hover {
     background-color: $color-white;
-    border-radius: $three-px;
+    border-radius: $email-button-hover-radius;
   }
 }
 
 .basic-btn {
-  margin-bottom: $five-percent;
+  margin: $basic-btn-margin;
 
   &:hover {
     background: $basic-button-hover;

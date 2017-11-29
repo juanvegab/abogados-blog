@@ -60,5 +60,68 @@ $one-px: 1px;
 //EMs
 $one-em: 1em;
 
+
+
+//DASHBOARD COMPONENT
+//Variables within .user-info
+$user-info-padding: 0 0 10px 0;
+//H4s
+$ui-h4-margin: 30px auto 0;
+$ui-h4-width: 80%;
+//Ps
+$ui-p-margin: 5px auto 0;
+$ui-p-width: 80%;
+//.logout
+$logout-margin: 30px auto 0;
+$logout-width: 80%;
+//.profile-pic
+$profile-border: 5px solid $color-light-black;
+$profile-border-radius: 100%;
+$profile-margin: 0 auto;
+$profile-width: 50%;
+//END of Variables in .user-info
+//END of VARIABLES in Dashboard Component
+
+//LOGIN COMPONENT
+//.lock
+$lock-font-size: 50px;
+//Max-width Media query
+$login-max-width: 600px;
+//.page
+$page-padding: 1em;
+//.toolbar
+$toolbar-margin-left: -45%;
+$toolbar-width: 90%;
+//END LOGIN COMPONENT
+
+//SIGNUP COMPONENT
+$sc-h2-margin: 1em;
+//END SIGNUP COMPONENT
+
+//COMMON
+//BUTTONS
+//.google-button
+$google-border: 1px solid $color-grey;
+
+//.email-button
+$email-button-hover-radius: 3px;
+
+//.basic-btn
+$basic-btn-margin: 0 0 5% 0;
+//END BUTTONS
+
+//FORMS
+$form-container-radius: 3px;
+//END FORMS
+
+//INPUTS
+//.txt
+$txt-radius: 3px;
+$txt-margin: 0 0 5% 0;
+$txt-width: 100%;
+//END INPUTS
+
+//END COMMON
+
 // Font icon
 $fa-font-path: '~font-awesome/fonts';

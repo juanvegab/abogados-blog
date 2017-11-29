@@ -5,27 +5,27 @@ body {
 }
 
 .user-info {
-  padding-bottom: $ten-px;
+  padding: $user-info-padding;
   h3 {
     text-align: center;
   }
   h4 {
-    margin: $thirty-px auto 0;
-    width: $eighty-percent;
+    margin: $ui-h4-margin;
+    width: $ui-h4-width;
   }
   p {
-    margin: $five-px auto 0;
-    width: $eighty-percent;
+    margin: $ui-p-margin;
+    width: $ui-p-width;
   }
   .logout {
     display: block;
-    margin: $thirty-px auto 0;
-    width: $eighty-percent;
+    margin: $logout-margin;
+    width: $logout-width;
   }
   .profile-pic {
-    border: $five-px solid $color-light-black;
-    border-radius: $one-hundred;
-    margin: 0 auto;
-    width: $fifty-percent;
+    border: $profile-border;
+    border-radius: $profile-border-radius;
+    margin: $profile-margin;
+    width: $profile-width;
   }
 }
