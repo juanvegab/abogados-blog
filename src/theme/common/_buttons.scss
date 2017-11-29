@@ -11,7 +11,7 @@
 
 .google-button {
   background: $color-white;
-  border: 1px solid $color-grey;
+  border: $one-px solid $color-grey;
 
   &:hover {
     background: $color-grey-hover;
@@ -23,12 +23,12 @@
 
   &:hover {
     background-color: $color-white;
-    border-radius: 3px;
+    border-radius: $three-px;
   }
 }
 
 .basic-btn {
-  margin-bottom: 5%;
+  margin-bottom: $five-percent;
 
   &:hover {
     background: $basic-button-hover;

@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-3">
-      <div class="user-info" *ngIf="user$ | async as user">
+      <div *ngIf="user$ | async as user" class="user-info">
         <img class="img-responsive profile-pic" src="{{ user.photoURL }}" alt="">
         <h3>{{ user.name }}  {{ user.lastName }}</h3>
         <h4>Usuario: {{ user.type }}</h4>

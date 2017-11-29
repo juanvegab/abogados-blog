@@ -12,7 +12,7 @@ $color-cardinal-pink: #870673;
 $color-carnation: #f84a4e;
 $color-chelsea-gem: #986900;
 $color-congress-blue: #014c8c;
-$color-congress-blue-hover: rgba($color-congress-blue, .90);
+$color-congress-blue-hover: rgba($color-congress-blue, .9);
 $color-grey: #848484;
 $color-grey-hover: rgba($color-grey, .05);
 $basic-button-hover:rgba($color-basic-btn, .75);
@@ -40,6 +40,25 @@ $color-light-black: rgba($color-black, .5);
 $color-white: #fff;
 $color-light-gray: #95989a;
 $color-concrete-gray: #ececec;
+
+//Fixed Numbers in %, PX and EM
+//Percentages
+$one-hundred: 100%;
+$ninety-percent: 90%;
+$eighty-percent: 80%;
+$fifty-percent: 50%;
+$forty-five: 45%;
+$five-percent: 5%;
+//Pixels
+$six-hundred-px: 600px;
+$fifty-px: 50px;
+$thirty-px: 30px;
+$ten-px: 10px;
+$five-px: 5px;
+$three-px: 3px;
+$one-px: 1px;
+//EMs
+$one-em: 1em;
 
 // Font icon
 $fa-font-path: '~font-awesome/fonts';
