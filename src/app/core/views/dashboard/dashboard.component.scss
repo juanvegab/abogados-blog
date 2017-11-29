@@ -1,1 +1,31 @@
 @import '~theme/variables';
+
+body {
+  background: $color-white;
+}
+
+.user-info {
+  padding: $user-info-padding;
+  h3 {
+    text-align: center;
+  }
+  h4 {
+    margin: $ui-h4-margin;
+    width: $ui-h4-width;
+  }
+  p {
+    margin: $ui-p-margin;
+    width: $ui-p-width;
+  }
+  .logout {
+    display: block;
+    margin: $logout-margin;
+    width: $logout-width;
+  }
+  .profile-pic {
+    border: $profile-border;
+    border-radius: $profile-border-radius;
+    margin: $profile-margin;
+    width: $profile-width;
+  }
+}
