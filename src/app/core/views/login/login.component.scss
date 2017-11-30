@@ -2,16 +2,16 @@
 //@import '~theme/common/buttons';
 
 .lock {
-  font-size: 50px;
+  font-size: $lock-font-size;
 }
 
-@media (max-width:  600px) {
+@media (max-width:  $login-max-width) {
   .page {
-    padding: 1em;
+    padding: $page-padding;
   }
 
   .toolbar {
-    margin-left:  -45%;
-    width: 90%;
+    margin-left:  $toolbar-margin-left;
+    width: $toolbar-width;
   }
 }

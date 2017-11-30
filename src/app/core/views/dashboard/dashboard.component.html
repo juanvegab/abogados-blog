@@ -1,14 +1,15 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-3">
-      <div *ngIf="user$ | async as user">
-        <img class="img-responsive" src="{{ user.photoURL }}" alt="">
+      <div *ngIf="user$ | async as user" class="user-info">
+        <img class="img-responsive profile-pic" src="{{ user.photoURL }}" alt="">
         <h3>{{ user.name }}  {{ user.lastName }}</h3>
-        <h4>Usuario {{ user.type }}</h4>
-        <p>Areas: {{ user.areas }}</p>
-        <p>Usuario aprobado: {{ user.isApproved }}</p>
-        <p>Usuario publico: {{ user.isPublic }}</p>
-        <p>Correo: {{ user.email }}</p>
+        <h4>Usuario: {{ user.type }}</h4>
+        <p><strong>Areas:</strong> {{ user.areas }}</p>
+        <p><strong>Usuario aprobado:</strong> {{ user.isApproved }}</p>
+        <p><strong>Usuario público:</strong> {{ user.isPublic }}</p>
+        <p><strong>Correo:</strong> {{ user.email }}</p>
+        <button (click)="logout()" class="fb-button logout">Logout</button>
       </div>
     </div>
 
@@ -17,5 +18,3 @@
     </div>
   </div>
 </div>
-
-<button (click)="logout()" class="fb-button">Logout</button>

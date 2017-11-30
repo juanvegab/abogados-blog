@@ -1,8 +1,8 @@
 @import '~theme/variables';
 
 .txt {
-  border-radius: 3px;
-  margin-bottom: 5%;
-  width: 100%;
+  border-radius: $txt-radius;
+  margin: $txt-margin;
+  width: $txt-width;
 
 }

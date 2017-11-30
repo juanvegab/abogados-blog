@@ -5,16 +5,17 @@ $color-atlantis: #5ed33f;
 $color-alto: #d2d2d2;
 $color-alizarin-crimson: #ed1d24;
 
+$color-basic-btn: #3b8598;
 $color-boulder: #7d7d7d;
 $color-brink-pink: #fd7377;
 $color-cardinal-pink: #870673;
 $color-carnation: #f84a4e;
 $color-chelsea-gem: #986900;
 $color-congress-blue: #014c8c;
-$color-congress-blue-hover: rgba(1, 76, 140, 0.90);
+$color-congress-blue-hover: rgba($color-congress-blue, .9);
 $color-grey: #848484;
-$color-grey-hover: rgba(132, 132, 132, 0.05);
-$basic-button-hover:rgba(59, 133, 152, 0.75);
+$color-grey-hover: rgba($color-grey, .05);
+$basic-button-hover:rgba($color-basic-btn, .75);
 $color-catskill-white: #ebf1f5;
 $color-fuel-yellow: #eeae1d;
 $color-fuchsia-pink: #c55ab4;
@@ -34,9 +35,93 @@ $color-saffron-mango: #fac54b;
 $color-sangria: #960004;
 $color-violet-eggplant: #a81591;
 
+$color-black: #000;
+$color-light-black: rgba($color-black, .5);
 $color-white: #fff;
 $color-light-gray: #95989a;
 $color-concrete-gray: #ececec;
+
+//Fixed Numbers in %, PX and EM
+//Percentages
+$one-hundred: 100%;
+$ninety-percent: 90%;
+$eighty-percent: 80%;
+$fifty-percent: 50%;
+$forty-five: 45%;
+$five-percent: 5%;
+//Pixels
+$six-hundred-px: 600px;
+$fifty-px: 50px;
+$thirty-px: 30px;
+$ten-px: 10px;
+$five-px: 5px;
+$three-px: 3px;
+$one-px: 1px;
+//EMs
+$one-em: 1em;
+
+
+
+//DASHBOARD COMPONENT
+//Variables within .user-info
+$user-info-padding: 0 0 10px 0;
+//H4s
+$ui-h4-margin: 30px auto 0;
+$ui-h4-width: 80%;
+//Ps
+$ui-p-margin: 5px auto 0;
+$ui-p-width: 80%;
+//.logout
+$logout-margin: 30px auto 0;
+$logout-width: 80%;
+//.profile-pic
+$profile-border: 5px solid $color-light-black;
+$profile-border-radius: 100%;
+$profile-margin: 0 auto;
+$profile-width: 50%;
+//END of Variables in .user-info
+//END of VARIABLES in Dashboard Component
+
+//LOGIN COMPONENT
+//.lock
+$lock-font-size: 50px;
+//Max-width Media query
+$login-max-width: 600px;
+//.page
+$page-padding: 1em;
+//.toolbar
+$toolbar-margin-left: -45%;
+$toolbar-width: 90%;
+//END LOGIN COMPONENT
+
+//SIGNUP COMPONENT
+$sc-h2-margin: 1em;
+//END SIGNUP COMPONENT
+
+//COMMON
+//BUTTONS
+//.google-button
+$google-border: 1px solid $color-grey;
+
+//.email-button
+$email-button-hover-radius: 3px;
+
+//.basic-btn
+$basic-btn-margin: 0 0 5% 0;
+//END BUTTONS
+
+//FORMS
+$form-container-radius: 3px;
+//END FORMS
+
+//INPUTS
+//.txt
+$txt-radius: 3px;
+$txt-margin: 0 0 5% 0;
+$txt-width: 100%;
+//END INPUTS
+
+//END COMMON
 
 // Font icon
 $fa-font-path: '~font-awesome/fonts';
