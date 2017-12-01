@@ -5,13 +5,15 @@ import { PostsComponent } from './posts.component';
 import { PostEditComponent } from './edit';
 import { PostDetailComponent } from './detail';
 
-import { AuthService, PostsService, PostListingModule } from '../../../shared';
+import { AuthService, PostModule, PostsService, PostListingModule, SharedModule } from '../../../shared';
 
 @NgModule({
   imports: [
     CommonModule,
+    PostModule,
     PostsRoutingModule,
-    PostListingModule
+    PostListingModule,
+    SharedModule
   ],
   declarations: [
     PostsComponent,

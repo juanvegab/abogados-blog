@@ -1,3 +1,36 @@
-<p>
-  post-edit works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6">
+      <form (ngSubmit)="submit(newPost.value)" [formGroup]="newPost">
+        <div class="form-group">
+          <label for="name">Titulo</label>
+          <input
+            type="text"
+            id="title"
+            class="form-control"
+            name="title"
+            formControlName="title"
+            placeholder="Post title">
+          <div *ngIf="pfControls.title.invalid && (pfControls.title.dirty || pfControls.title.touched)" class="alert alert-danger">
+            <p *ngIf="pfControls.title.errors?.required">Este campo es requerido.</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="content">Contenido</label>
+          <input
+            type="text"
+            id="content"
+            class="form-control"
+            name="content"
+            formControlName="content"
+            placeholder="Post content">
+          <div *ngIf="pfControls.content.invalid && (pfControls.content.dirty || pfControls.content.touched)" class="alert alert-danger">
+            <p *ngIf="pfControls.content.errors?.required">Este campo es requerido.</p>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary pull-right" [disabled]="newPost.invalid"><i class="fa fa-check"></i>Create</button>
+        <button type="button" class="btn btn-default pull-right mr-1" (click)="cancelBuild()"><i class="fa fa-times"></i>Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>

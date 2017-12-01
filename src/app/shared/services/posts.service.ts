@@ -19,7 +19,7 @@ export class PostsService {
     this.posts$ = this.postsCol.valueChanges();
   }
 
-  public getPostsCollection() {
+  public getPostsCollection(): AngularFirestoreCollection<PostModel> {
     return this.postsCol;
   }
 
@@ -31,6 +31,13 @@ export class PostsService {
           post.id = a.payload.doc.id;
           return post;
         });
+      });
+  }
+
+  public getPost$(uid: string): Observable<PostModel> {
+    return this.postsCol.doc(uid).snapshotChanges()
+      .map((postDoc) => {
+        return new PostModel(postDoc.payload.data());
       });
   }
 }

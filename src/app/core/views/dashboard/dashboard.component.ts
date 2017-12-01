@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService, UserModel, UserService } from '../../../shared/';
+import { AuthService, PostModel, PostsService, UserModel, UserService } from '../../../shared/';
 
 import { Observable } from 'rxjs/Observable';
 
@@ -11,12 +11,15 @@ import { Observable } from 'rxjs/Observable';
 export class DashboardComponent implements OnInit {
 
   public user$: Observable<UserModel>;
+  public posts$: Observable<PostModel[]>;
 
   constructor(public authService: AuthService,
+              public postService: PostsService,
               public userService: UserService) { }
 
   ngOnInit() {
     this.user$ = this.authService.user;
+    this.posts$ = this.postService.getPosts$();
   }
 
   public logout() {

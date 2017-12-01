@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import { AuthService, PostModel, PostsService, UserModel } from '../../../../shared/';
+
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-post-detail',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostDetailComponent implements OnInit {
 
-  constructor() { }
+  public post$: Observable<PostModel>;
+  public user$: Observable<UserModel>;
+
+  constructor(public authService: AuthService,
+              public postService: PostsService,
+              private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.user$ = this.authService.user;
+    this.activatedRoute.params.subscribe((params: Params) => {
+      const postId = params['id'];
+      this.post$ = this.postService.getPost$(postId);
+    });
   }
-
 }
