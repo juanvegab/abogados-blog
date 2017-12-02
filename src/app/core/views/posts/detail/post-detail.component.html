@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <a routerLink="../" class="btn btn-primary btn-sm pull-right"><i class="fa fa-arrow-left"></i> Volver</a>
+      <ng-container *ngIf="user$ | async as user">
+        <ng-container *ngIf="post$ | async as post">
+          <app-post
+            [post]="post"
+            [user]="user">
+          </app-post>
+          <p *ngIf="!post">Este articulo no fue encontrado.</p>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>

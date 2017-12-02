@@ -12,6 +12,8 @@ import { UserModel } from '../models';
 export class AuthService {
 
   public user: Observable<UserModel>;
+  public userId: string;
+  public userRef: AngularFirestoreDocument<UserModel>;
   private savedSessionTime: Date;
 
   constructor(private afAuth: AngularFireAuth,
@@ -21,32 +23,20 @@ export class AuthService {
     this.user = afAuth.authState
       .switchMap( user => {
         if (user) {
-          return afs.doc<UserModel>('users/${user.uid}').valueChanges();
+          this.userId = user.uid;
+          return afs.doc<UserModel>(`users/${user.uid}`).valueChanges();
         } else {
           return Observable.of(null);
         }
       });
-    // this.user.subscribe((user) => {
-    //   if (user) {
-
-    //     this.userService.getUserObservable(user.uid)
-    //       .subscribe((data: UserModel[]) => {
-    //         if (data.length > 0) {
-    //           this.userDetails = data[0];
-    //         } else {
-    //           this.userService.getUsersCollection().add(new UserModel(user));
-    //           // save user details because is new user
-    //         }
-    //         this.saveSessionData(data);
-    //       });
-    //   } else {
-    //     this.userDetails = null;
-    //   }
-    // });
   }
 
   public signInWithGoogle() {
     return this.oAuthLogin(new firebase.auth.GoogleAuthProvider());
+  }
+
+  public getUserRef(uid): AngularFirestoreDocument<UserModel> {
+    return this.userRef ? this.userRef : this.afs.doc(`users/${uid}`);
   }
 
   private oAuthLogin(provider) {
@@ -57,10 +47,9 @@ export class AuthService {
   }
 
   private updateUserData(user) {
-    const userRef: AngularFirestoreDocument<UserModel>
-      = this.afs.doc('users/${user.uid}');
     const data: UserModel = new UserModel(user);
-    userRef.set({...data});
+    this.userRef = this.afs.doc(`users/${user.uid}`);
+    this.userRef.set({...data});
   }
 
   public logout() {

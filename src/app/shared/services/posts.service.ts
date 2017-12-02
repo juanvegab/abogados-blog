@@ -6,24 +6,38 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { PostModel } from '../models';
 
-import { USERS_COLLECTION } from '../consts';
+import { POSTS_COLLECTION } from '../consts';
 
 @Injectable()
 export class PostsService {
 
   public postsCol: AngularFirestoreCollection<PostModel>;
-  public posts: Observable<PostModel[]>;
+  public posts$: Observable<PostModel[]>;
 
   constructor(private afs: AngularFirestore) {
-    this.postsCol = this.afs.collection(USERS_COLLECTION);
-    this.posts = this.postsCol.valueChanges();
+    this.postsCol = this.afs.collection(POSTS_COLLECTION);
+    this.posts$ = this.postsCol.valueChanges();
   }
 
-  public getUserCollection() {
+  public getPostsCollection(): AngularFirestoreCollection<PostModel> {
     return this.postsCol;
   }
 
-  public getUserObservable() {
-    return this.posts;
+  public getPosts$(): Observable<PostModel[]> {
+    return this.postsCol.snapshotChanges()
+      .map((actions) => {
+        return actions.map( a => {
+          const post = new PostModel(a.payload.doc.data());
+          post.id = a.payload.doc.id;
+          return post;
+        });
+      });
+  }
+
+  public getPost$(uid: string): Observable<PostModel> {
+    return this.postsCol.doc(uid).snapshotChanges()
+      .map((postDoc) => {
+        return new PostModel(postDoc.payload.data());
+      });
   }
 }

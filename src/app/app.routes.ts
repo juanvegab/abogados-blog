@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { AuthGuard, ProtectedComponent } from './core';
 
 const PROTECTED_ROUTES: Routes = [
-  { path: 'dashboard',  loadChildren: './core/views/dashboard/dashboard.module#DashboardModule' }
+  { path: 'dashboard',  loadChildren: './core/views/dashboard/dashboard.module#DashboardModule' },
+  { path: 'posts',      loadChildren: './core/views/posts/posts.module#PostsModule' }
 ];
 
 const PUBLIC_ROUTES: Routes = [
