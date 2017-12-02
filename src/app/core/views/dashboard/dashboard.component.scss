@@ -1,5 +1,27 @@
 @import '~theme/variables';
 
+//DASHBOARD COMPONENT Variables
+//Variables within .user-info
+$user-info-padding: 0 0 10px 0;
+//H4s
+$ui-h4-margin: 30px auto 0;
+$ui-h4-width: 80%;
+//Ps
+$ui-p-margin: 5px auto 0;
+$ui-p-width: 80%;
+//.logout
+$logout-margin: 30px auto 0;
+$logout-width: 80%;
+//.profile-pic
+$profile-border: 5px solid $color-light-black;
+$profile-border-radius: 100%;
+$profile-margin: 0 auto;
+$profile-width: 50%;
+//END of Variables in .user-info
+//END of VARIABLES in Dashboard Component
+
+
+
 body {
   background: $color-white;
 }
