@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule } from '@angular/router';
 
-import { AuthService, SharedModule } from '../../../shared';
+import { AuthService, FooterModule, NavigationBarModule, SharedModule } from '../../../shared';
 
 import { ProtectedComponent } from './protected.component';
 
@@ -14,6 +14,8 @@ import { ProtectedComponent } from './protected.component';
     ProtectedComponent
   ],
   imports: [
+    FooterModule,
+    NavigationBarModule,
     SharedModule,
     RouterModule
   ],
