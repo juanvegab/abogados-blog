@@ -13,15 +13,15 @@
       </div>
     </div>
 
-    <div class="col-md-9">
-      <a class="btn btn-primary btn-sm" routerLink="../posts/create">
-        Write new post <i class="fa fa-plus"></i>
-      </a>
+    <div class="col-md-6 post-content">
       <app-post-listing
         [isThumbnail]="true"
         [posts]="posts$ | async"
         [user]="user$ | async">
       </app-post-listing>
+      <a class="btn btn-primary btn-sm pull-right" routerLink="../posts/create">
+        Crear Consulta <i class="fa fa-plus"></i>
+      </a>
     </div>
   </div>
 </div>

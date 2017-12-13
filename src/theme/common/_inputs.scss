@@ -1,5 +1,14 @@
 @import '~theme/variables';
 
+input {
+  &.txt {
+    background: $color-white;
+    border: 1px solid $color-silver;
+    font-size: 1.3em;
+    padding: 1.3em 1em;
+  }
+}
+
 .txt {
   border-radius: $txt-radius;
   margin: $txt-margin;

@@ -2,16 +2,16 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <ng-container *ngIf="user$ | async as user">
-        <h2>Posts of {{ user.name }}</h2>
-        <a class="btn btn-primary btn-sm" routerLink="../posts/create">
-          Write new post <i class="fa fa-plus"></i>
-        </a>
+        <h2>Consultas de {{ user.name }}</h2>
         <ng-container *ngIf="posts$ | async as posts">
           <app-post-listing
             [isThumbnail]="true"
             [posts]="posts"
             [user]="user">
           </app-post-listing>
+          <a class="btn btn-primary btn-sm pull-right" routerLink="../posts/create">
+            Crear consulta <i class="fa fa-plus"></i>
+          </a>
         </ng-container>
       </ng-container>
     </div>
