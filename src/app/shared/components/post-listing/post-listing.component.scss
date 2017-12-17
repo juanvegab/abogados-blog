@@ -1,0 +1,21 @@
+@import '~theme/variables';
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  padding-left: 0;
+  width: 100%;
+
+  .list-group-item {
+    background-color: $color-light-silver;
+    border: 1px solid $color-very-light-black;
+    display: block;
+    padding: .5rem 1rem;
+    //position: relative;
+  }
+
+  a {
+    color: $color-light-black;
+  }
+}

@@ -15,7 +15,7 @@ $color-congress-blue: #014c8c;
 $color-congress-blue-hover: rgba($color-congress-blue, .9);
 $color-grey: #848484;
 $color-grey-hover: rgba($color-grey, .05);
-$basic-button-hover:rgba($color-basic-btn, .75);
+$basic-button-hover: rgba($color-basic-btn, .75);
 $color-catskill-white: #ebf1f5;
 $color-fuel-yellow: #eeae1d;
 $color-fuchsia-pink: #c55ab4;
@@ -37,9 +37,13 @@ $color-violet-eggplant: #a81591;
 
 $color-black: #000;
 $color-light-black: rgba($color-black, .5);
+$color-very-light-black: rgba($color-black, .125);
 $color-white: #fff;
 $color-light-gray: #95989a;
 $color-concrete-gray: #ececec;
+$color-light-silver: #f8f8f8;
+
+$header-bg: #3b8598;
 
 //Fixed Numbers in %, PX and EM
 //Percentages

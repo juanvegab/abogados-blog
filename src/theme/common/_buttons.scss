@@ -1,5 +1,14 @@
 @import '~theme/variables';
 
+button {
+  cursor: pointer;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  padding: 1.2em;
+  // width: 100%;
+}
+
+
 .fb-button {
   background: $color-congress-blue;
   color: $color-white;
@@ -12,6 +21,7 @@
 .google-button {
   background: $color-white;
   border: $google-border;
+  width: 100%;
 
   &:hover {
     background: $color-grey-hover;
@@ -28,9 +38,18 @@
 }
 
 .basic-btn {
+  background: $header-bg;
+  color: $color-white;
   margin: $basic-btn-margin;
+  width: 100%;
 
   &:hover {
     background: $basic-button-hover;
+  }
+}
+
+@media (max-width: 600px) {
+  button {
+    font-size: 1em;
   }
 }
